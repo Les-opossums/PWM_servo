@@ -20,7 +20,7 @@ architecture rtl of counter is
 begin
     process(clk, rst)
     begin
-        if rst = '1' then
+        if rst = '0' then
             counter_20ms_reg <= (others => '0');
             counter <= 1;
         elsif rising_edge(clk) then

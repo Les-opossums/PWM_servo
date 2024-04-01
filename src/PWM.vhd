@@ -17,7 +17,7 @@ architecture Behavioral of PWM is
 begin
     process(clk, reset)
     begin
-        if reset = '1' then
+        if reset = '0' then
             counter <= to_unsigned(1500, 16);
             pwm_out_reg <= '0';
         elsif rising_edge(clk) then
