@@ -13,13 +13,13 @@ architecture Behavioral of counter_tb is
         port(
             clk             : in std_logic;
             rst             : in std_logic;
-            counter_20ms    : out integer range 0 to 20000
+            counter_20ms    : out unsigned (15 downto 0)
         );
     end component;
 
     signal clk_tb : std_logic := '0';
     signal rst_tb : std_logic := '0';
-    signal counter_20ms_tb : integer range 0 to 20000;
+    signal counter_20ms_tb : unsigned (15 downto 0);
 
     constant clk_period : time := 20 ns; -- 50 MHz clock
 
