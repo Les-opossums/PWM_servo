@@ -23,9 +23,9 @@ begin
         elsif rising_edge(clk) then
             counter <= to_unsigned((to_integer(angle) * 1000) / 180 + 1000 , 16);
             if to_integer(counter_20ms) < to_integer(counter) then
-                pwm_out_reg <= '1';
-            else
                 pwm_out_reg <= '0';
+            else
+                pwm_out_reg <= '1';
             end if;
         end if;
     end process;
